@@ -1,0 +1,13 @@
+version: '3'
+services:
+  minion:
+    image: postgres:9.6.1-alpine
+    env_file:
+      - .postgres.env
+    volumes:
+        - postgres:/var/lib/postgresql/data
+    command: ["-f"]
+    ports:
+      - "5432:5432"         
+volumes:
+  postgres:
