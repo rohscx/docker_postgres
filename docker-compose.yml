@@ -1,6 +1,6 @@
 version: '3'
 services:
-  minion:
+  postsql:
     image: postgres:9.6.1-alpine
     env_file:
       - .postgres.env
